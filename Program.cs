@@ -58,14 +58,14 @@ namespace Rattrapage
             }
             void existeAutre()
             {
-                if (titre = '')
+                if (titre == '')
                     Console.WriteLine("le livre existe");
                 else
                     Console.WriteLine("le livre n existe pas");
             }
             void estDisponible()
             {
-                if (titre = '')
+                if (titre == '')
                     Console.WriteLine("le livre est diponible");
                 else
                     Console.WriteLine("le livre n est pas disponible");
@@ -84,6 +84,7 @@ namespace Rattrapage
             }
 
         }
+        //----Classe Etat Livre----
         public class Etat_livre : Livre
         {
             private Boolean disponible;
@@ -100,6 +101,7 @@ namespace Rattrapage
                 }
             }
         }
+        //----Classe Emprunteur----
         public class Emprunteur
         {
             private string nom;
@@ -149,6 +151,7 @@ namespace Rattrapage
                 dateinscription = dateins;
             }
         }
+        //----Classe Emprunt----
         public class emprunt
         {
             private int numero;
@@ -205,11 +208,13 @@ namespace Rattrapage
             }
             void finaliserEmprunt() { }
         }
+        //----Classe Emprunt----
         public class duree : emprunt
         {
             string dateDepasse;
             string retour;
         }
+        //----Classe Reservation----
         public class Reservation :Emprunteur
         {
             string date_reservation;
